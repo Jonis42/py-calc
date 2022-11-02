@@ -1,5 +1,4 @@
-
-
+history = 0
 
 def menu_function():
     print('PyCalc v.1.0')
@@ -9,6 +8,8 @@ def menu_function():
     print('3. Divide 2 numbers')
     print('4. Multiply 2 numbers')
     print('5. Exit Application')
+    print('------------')
+    print('Previous number: ', history)
     print('------------')
 
 menu_function()
@@ -27,6 +28,7 @@ while True:
             firstNum = float(input("Enter first number: "))
             secondNum = float(input("Enter second number: "))
             print("\n", "Sum: ", firstNum + secondNum, "\n")
+            history = firstNum + secondNum
             menu_function()
         except ValueError:
             print("Please enter a number.")
@@ -37,6 +39,7 @@ while True:
             firstNum = float(input("Enter first number: "))
             secondNum = float(input("Enter second number: "))
             print("\n", "Difference: ", firstNum - secondNum, "\n")
+            history = firstNum - secondNum
             menu_function()
         except ValueError:
             print("Please enter a number.")
@@ -47,6 +50,7 @@ while True:
             firstNum = float(input("Enter first number: "))
             secondNum = float(input("Enter second number: "))
             print("\n", "Quotient: ", firstNum / secondNum, "\n")
+            history = firstNum / secondNum
             menu_function()
         except ValueError:
             print("Please enter a number.")
@@ -60,6 +64,7 @@ while True:
             firstNum = float(input("Enter first number: "))
             secondNum = float(input("Enter second number: "))
             print("\n", "Product: ", firstNum * secondNum, "\n")
+            history = firstNum * secondNum
             menu_function()
         except ValueError:
             print("Please enter a number.")
